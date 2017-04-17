@@ -24,8 +24,17 @@ Parts left by Brett
 
 
 Parts to order
-+ 
-
++ 20x SMD LEDs 1206 package
++ DB Sub PCB Connectors for the cables (
+		6x http://www.altronics.com.au/p/p3084b-oupiin-de15-high-density-female-pcb-mount-90-deg./
+ 
+		6x http://www.altronics.com.au/p/p3030-oupiin-de9-female-pcb-mount-90-deg./
+		)
++ 18x NPN Transistors BC817(?) (have to be soldered upside down)
++ 6xSOD123 Zener diodes (5.6V)
++ Enamel jumper cable (mystery wire)
++ 2x TCMT1108 Optocouples
++ Heat shrink tubing for cables
 
 ## Technical References
 
