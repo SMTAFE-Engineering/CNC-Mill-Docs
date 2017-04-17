@@ -19,7 +19,9 @@ OriginalDocs is a collection of Brett's documents regarding the CnC breakout boa
 
 CnC breakout board - 
 Parts left by Brett
-+ 
++ Etched board
++ Connectors for cable
+
 
 Parts to order
 + 
@@ -57,7 +59,7 @@ Cable-out
 
 ### Software references
 EMC2/LinuxCNC
-
+KiCad
 
 ### Cooling
 
