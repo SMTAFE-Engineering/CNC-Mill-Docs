@@ -25,7 +25,8 @@ Parts left by Brett
 
 Parts to order
 + 20x SMD LEDs 1206 package
-+ DB Sub PCB Connectors for the cables (
++ DB Sub PCB Connectors for the cables 
+		(
 		6x http://www.altronics.com.au/p/p3084b-oupiin-de15-high-density-female-pcb-mount-90-deg./
  
 		6x http://www.altronics.com.au/p/p3030-oupiin-de9-female-pcb-mount-90-deg./
