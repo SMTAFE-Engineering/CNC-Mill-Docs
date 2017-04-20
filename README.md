@@ -40,28 +40,38 @@ Parts to order
 ## Technical References
 
 ### X-axis
-Motors
-Driver
-Cable-out
-Breakouts
+#### Motors
+130ST-M10010LB
+1kW, 10Nm
+#### Driver
+Maxsine EP100
+CN1, CN2 connections
+#### Cable-out
 
 ### Y-axis
-Motor
-Driver
-Cable-out
-Breakouts
+#### Motor
+ACM604 V60-01-2500
+400W
+#### Driver
+ACS806
+#### Cable-out
 
 ### Z-axis
-Motor
-Driver
-Cable-out
-Breakouts
+#### Motor
+ACM604 V60-01-2500
+400W
+#### Driver
+ACS806
+#### Cable-out
 
 ### Spindle
-Motor
-Driver
-Cable-out
-Breakouts
+#### Motor
+GDL 120-30-24Z
+Has a bunch of chinese markings going on, not very helpful
+
+#### Driver
+Unsure, but pretty certain it's not an AC806.
+#### Cable-out
 
 ### FPGA
 #### Mesa 5i22 FPGA Board
@@ -74,14 +84,41 @@ DB-Sub connectors for X1,X2,Y,Z,Spindle
 Not sure who built it
 Manufactured by Mitch at Hackvana
 
-Cable-out
+#### Cable-out?
 
 ### Software references
+Terminal login details: technician   |    fablab
 EMC2/LinuxCNC
 KiCad
 
 ### Cooling
-
+Two pumps I believe
 
 ### Ancillary
+#### KTA205 - Parallel port interface
+By Ocean Controls, https://oceancontrols.com.au/KTA-205.html
 
+This will obviously be removed during this upgrade but if it's lying around and you're wondering what it was for then here you go.
+
+#### X,Y axis breakout
+By BrettRD
+To be removed in the upgrade
+
+#### Z axis breakout
+By BrettRD
+To be removed in the upgrade
+
+#### Banner SC26-2D Safety Module
+From what I understand this is the safety stop unit for the three-phase
+
+#### High voltage sticker
+Not sure what's behind it
+But lots of potential
+And dangerous
+Like me
+
+#### Allen-Bradley PowerFlex525
+????
+
+#### MeanWell SDR-960-24
+Not sure what this does but I'm sure it Means Well
