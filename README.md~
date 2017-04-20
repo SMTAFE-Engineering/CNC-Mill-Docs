@@ -64,16 +64,7 @@ Cable-out
 Breakouts
 
 ### FPGA
-#### Mesa 5i22 FPGA Board
-FPGA makes acceleration calculations faster
-+ Manual
-+ Datasheet
-
-#### Custom FPGA Breakout boards
-DB-Sub connectors for X1,X2,Y,Z,Spindle
-Not sure who built it
-Manufactured by Mitch at Hackvana
-
+Custom boards
 Cable-out
 
 ### Software references
