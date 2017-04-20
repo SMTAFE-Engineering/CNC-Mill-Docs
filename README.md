@@ -48,7 +48,7 @@ http://linuxcnc.org/docs/html/man/man9/encoder_ratio.9.html
 130ST-M10010LB
 1kW, 10Nm
 #### Driver
-Maxsine EP100
+Maxsine EP100 (KRS?)
 CN1, CN2 connections
 #### Cable-out
 
@@ -57,7 +57,7 @@ CN1, CN2 connections
 ACM604 V60-01-2500
 400W
 #### Driver
-ACS806
+Leadshine ACS806
 #### Cable-out
 
 ### Z-axis
@@ -65,7 +65,7 @@ ACS806
 ACM604 V60-01-2500
 400W
 #### Driver
-ACS806
+Leadshine ACS806
 #### Cable-out
 
 ### Spindle
@@ -74,7 +74,8 @@ GDL 120-30-24Z
 Has a bunch of chinese markings going on, not very helpful
 
 #### Driver
-Unsure, but pretty certain it's not an AC806.
+Allen-Bradley Powerflex 525 
+
 #### Cable-out
 
 ### FPGA
@@ -120,9 +121,6 @@ Not sure what's behind it
 But lots of potential
 And dangerous
 Like me
-
-#### Allen-Bradley PowerFlex525
-????
 
 #### MeanWell SDR-960-24
 Not sure what this does but I'm sure it Means Well
