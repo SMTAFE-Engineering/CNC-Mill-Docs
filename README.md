@@ -37,6 +37,10 @@ Parts to order
 + 2x TCMT1108 Optocouples
 + Heat shrink tubing for cables
 
+### LinuxCNC configuration
+Keywords: Slave two-motors on the same axis, PID control using encoder_ratio
+http://linuxcnc.org/docs/html/man/man9/encoder_ratio.9.html
+
 ## Technical References
 
 ### X-axis
