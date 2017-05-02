@@ -4,8 +4,14 @@ Large CNC documentation continued from BrettRD
 I'm new to Git but here goes. I'm going to collate information regarding the large CNC macine here.
 
 The machine currently operates from serial-PC to one of each X,Y,Z,Spindle, and is capable of machining soft materials. Attempting to machine harder materials can cause the trapezoidal rails of the X-axis to bind (Jarvis, Harmsworth, 2017)
+Previous configuration used two ACM604 servos running from the same pulse source with no feedback. Errors accumulated and built up a torque on the bridge, resulting in an over-current condition and E-stop.  Work continued with one motor disengaged.
+The ACM604 motors were upgraded to the 130ST-M10010LB to allow for harder materials, and to permit operation with only one motor on common materials.
+Currently, the bridge experiences a large displacement at the non-driven end with only modest forces; synchronised X drive motors are  important to this design.
 
 My objective is to reconfigure machine to operate from FPGA-PC to X,X,Y,Z,Spindle so that both X-axis motors are displacement synchronised in order to drive the screws on each trap-rail in parallel (preventing binding).
+
+The FPGA allows the PC to be aware of the location of the servos, corrected every rotation with a zero-pulse from the encoders.
+The PC will control the relative displacement between X-motors directly to permit fine calibration of bridge alignment.
 
 Things I'll document here:
 
@@ -51,31 +57,42 @@ http://linuxcnc.org/docs/html/man/man9/encoder_ratio.9.html
 Maxsine EP100 (KRS?)
 CN1, CN2 connections
 #### Cable-out
+See EP-100 datasheet
 
 ### Y-axis
 #### Motor
 ACM604 V60-01-2500
-400W
 #### Driver
 Leadshine ACS806
+60V capable BLDC servo driver
+Currently operating at 24V
 #### Cable-out
+See ACS-806 datasheet
 
 ### Z-axis
 #### Motor
 ACM604 V60-01-2500
-400W
+400W, 60V, 7Nm brushless DC motors, glass disk encoders
 #### Driver
 Leadshine ACS806
+60V capable BLDC servo driver
+Currently operating at 24V
 #### Cable-out
+See ACS-806 datasheet
 
 ### Spindle
 #### Motor
 GDL 120-30-24Z
-Has a bunch of chinese markings going on, not very helpful
+Has a bunch of chinese markings going on, not very helpful.
+Traditional-Chinese port markings translate to form mnemonics such as "river flows from the mountain"
+6.5KW Water cooled Induction motor, See plaque for motor parameters
+BT40 taper with pneumatic tool change (and pneumatic brake)
 
-#### Driver
-Allen-Bradley Powerflex 525 
-
+#### Spindle Driver
+Allen-Bradley Powerflex 525
+VFD to suit induction motors
+Practical operating range 24000RPM to as low as 500RPM for soft materials
+Directly controls spindle coolant pump via mains contactor and 12V power supply.
 #### Cable-out
 
 ### FPGA
@@ -86,10 +103,11 @@ FPGA makes acceleration calculations faster
 
 #### Custom FPGA Breakout boards
 DB-Sub connectors for X1,X2,Y,Z,Spindle
-Not sure who built it
-Manufactured by Mitch at Hackvana
+Designed by Steve, Assembled by Jurgens
+PCBs Manufactured by Mitch at Hackvana
 
-#### Cable-out?
+#### Cable-out
+See PDF schematics
 
 ### Software references
 Terminal login details: technician   |    fablab
@@ -97,7 +115,12 @@ EMC2/LinuxCNC
 KiCad
 
 ### Cooling
-Two pumps I believe
+#### Spindle coolant
+Controlled by a GPIO timer output from the VFD.
+
+#### Flood coolant
+3-Phase bilge pump
+Controlled via a 3-phase contactor currently wired to a manual switch.
 
 ### Ancillary
 #### KTA205 - Parallel port interface
@@ -114,13 +137,14 @@ By BrettRD
 To be removed in the upgrade
 
 #### Banner SC26-2D Safety Module
-From what I understand this is the safety stop unit for the three-phase
+Controls all critical E-stop behaviours.
+Handles Australian standards indicator lamp.
+Handles E-stop buttons.
 
 #### High voltage sticker
-Not sure what's behind it
-But lots of potential
-And dangerous
-Like me
+A cover to protect operators from three-phase wiring while making changes to the low voltage systems.
+Contains contactors for VFD, pumps, etc.
 
 #### MeanWell SDR-960-24
-Not sure what this does but I'm sure it Means Well
+High current 24V power supply.
+This provides motive power to the low voltage servos and the rest of the system in general.
