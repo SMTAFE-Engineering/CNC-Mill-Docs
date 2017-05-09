@@ -86,7 +86,7 @@ GDL 120-30-24Z
 Has a bunch of chinese markings going on, not very helpful.
 Traditional-Chinese port markings translate to form mnemonics such as "river flows from the mountain"
 6.5KW Water cooled Induction motor, See plaque for motor parameters
-BT40 taper with pneumatic tool change (and pneumatic brake)
+BT30 taper with pneumatic tool change (and pneumatic brake)
 
 #### Spindle Driver
 Allen-Bradley Powerflex 525
@@ -116,10 +116,10 @@ KiCad
 
 ### Cooling
 #### Spindle coolant
-Controlled by a GPIO timer output from the VFD.
+12v bilge pump controlled by a Relay timer output from the VFD.
 
 #### Flood coolant
-3-Phase bilge pump
+3-Phase coolant pump
 Controlled via a 3-phase contactor currently wired to a manual switch.
 
 ### Ancillary
