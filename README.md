@@ -52,21 +52,22 @@ gantrykins
 
 ### Timeline of events
 #### Stage 0: Sanity checks
-##### Check both X motors and servo controllers
+##### Check both X motors and servo controllers can be controlled
 + Had to rewire the encoders but both motors work now
 
-#### Stage 1: Non-intvasive testing
+#### Stage 1: Non-invasive testing
 ##### Use FPGA to drive X1 Motor
-###### Confirm flow FPGA -> FPGA Breakout
+##### Confirm flow FPGA -> FPGA Breakout
 + The breakout was connected incorrectly due to different sized D-sub connectors being flush on faceplate not allowing pins to align correctly [fixed]
 + Checked the signals on the D-sub connectors to confirm the FPGA is being recognised and is configured for use. We can get pulse from the parallel ports on the faceplate (yay!) but the order is ZYX and what we're expecting is XXYZ. Need to change this in *.hal and *.ini
 
 ##### Confirm signal to FPGA Breakout to KRS Controller 
 + Need to construct a cable according to ./LimitsBreakout/pdf/KRSCablePinout.pdf
-+ Type of connector is Micro Delta Ribbon (MDR), NOT the Centronics connector. MDR is significantly more dense. In order to confirm the cable schematics I'll build a breakout on some vero board going from CN1 to D-25 to FPGA Breakout.
++ Type of connector is Micro Delta Ribbon (MDR), *NOT* the Centronics connector. MDR is significantly more dense. In order to confirm the cable schematics I'll build a breakout on some vero board going from CN1 to D-25 to FPGA Breakout.
 + Probably will need to start considering where the Limits Breakout fits in at this stage
 
 ##### Configure LinuxCNC to drive servo controllers from the correct parallel ports
++ 
 
 #### Stage 2: 
 ##### Introduce gantrykins to the configuration
